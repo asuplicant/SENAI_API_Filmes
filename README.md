@@ -2,6 +2,15 @@
 
 API desenvolvida pelo SENAI Paulo Antônio Skaf ૮ ˶ᵔ ᵕ ᵔ˶ ა
 
+<div align="left">
+  <img height="250" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenk0aXN4dzdhbXhuMGgxY3ViYTNtZndqMzFuaGhtMWc1aDd2MTQzYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EuCHgBO2sraOk/giphy.gif"  />
+</div>
+
+###
+###
+
+###
+
 ### ⌨ Pré-requisitos
 A API foi criada com o auxílio dos aplicativos Visual Studio 2022, SQL Server & SQL Management Studio 2019.  
 — Segue abaixo os meios de instalação:
