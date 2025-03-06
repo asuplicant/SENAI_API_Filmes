@@ -11,15 +11,14 @@ namespace API_Filmes_SENAI.Repositories
     {
         private readonly Filmes_Context _context;
 
-        public UsuarioRepository(Filmes_Context context)
+        public UsuarioRepository(Filmes_Context Context)
         {
-            _context = context;
+            _context = Context;
         }
 
         public Usuario BuscarPorEmailESenha(string email, string senha)
         {
-            try
-            {
+
                 Usuario usuarioBuscado = _context.Usuario.FirstOrDefault(u => u.Email == email)!;
 
                 if (usuarioBuscado != null)
@@ -31,14 +30,8 @@ namespace API_Filmes_SENAI.Repositories
                         return usuarioBuscado;
                     }
                 }
-                    return null!;
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+                    return null!;  
+           
         }
 
         public Usuario BuscarPorId(Guid id)

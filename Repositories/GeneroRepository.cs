@@ -58,6 +58,8 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
+  
+
         // metodo para cadastrar um novo genero
         public void Cadastrar(Genero novoGenero)
         {

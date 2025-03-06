@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
 using API_Filmes_SENAI.Domains;
 using API_Filmes_SENAI.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,6 +33,16 @@ namespace API_Filmes_SENAI.Controllers
             }
 
         }
+
+
+
+        /// <summary>
+        /// Endpoint para POSTAR um GÊNERO pelo seu ID!
+        /// </summary>
+        /// <param name="id">Id do GêneroBuscado</param>
+        /// <returns>Gênero Buscado</returns>
+
+        [Authorize]
         [HttpPost]
         public IActionResult Post(Genero novoGenero)
         {
@@ -48,7 +59,15 @@ namespace API_Filmes_SENAI.Controllers
             }
         }
 
-        [HttpPost("BuscarPorId{id}")]
+
+
+        /// <summary>
+        /// Endpoint para BUSCAR um GÊNERO pelo seu ID!
+        /// </summary>
+        /// <param name="id">Id do GêneroBuscado</param>
+        /// <returns>Gênero Buscado</returns>
+
+        [HttpGet("BuscarPorId{id}")]
         public IActionResult GetByld(Guid id)
         {
             try
@@ -63,6 +82,15 @@ namespace API_Filmes_SENAI.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+
+
+        /// <summary>
+        /// Endpoint para DELETAR um GÊNERO pelo seu ID!
+        /// </summary>
+        /// <param name="id">Id do GêneroBuscado</param>
+        /// <returns>Gênero Buscado</returns>
+        
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
@@ -78,6 +106,13 @@ namespace API_Filmes_SENAI.Controllers
                 throw;
             }
 
+
+
+            /// <summary>
+            /// Endpoint para ATUALIZAR um GÊNERO pelo seu ID!
+            /// </summary>
+            /// <param name="id">Id do GêneroBuscado</param>
+            /// <returns>Gênero Buscado</returns>
         }
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, Genero genero)
