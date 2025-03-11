@@ -77,10 +77,10 @@ namespace API_Filmes_SENAI.Controllers
                     }
                 );
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw;
+                return BadRequest(e.Message);
+                
             }
         }
     }

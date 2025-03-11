@@ -90,7 +90,7 @@ namespace API_Filmes_SENAI.Controllers
         /// </summary>
         /// <param name="id">Id do GêneroBuscado</param>
         /// <returns>Gênero Buscado</returns>
-        
+
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
@@ -132,6 +132,4 @@ namespace API_Filmes_SENAI.Controllers
 
     }
 }
-
-
 
