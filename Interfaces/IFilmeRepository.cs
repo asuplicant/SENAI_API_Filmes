@@ -17,6 +17,5 @@ namespace API_Filmes_SENAI.Interfaces
         // Listar os filmes pelo seu gênero!
         List<Filme> ListarPorGenero(Guid idGenero);
         Filme BuscarPorID(Guid id);
-        List<Filme> BuscarPorTitulo(string titulo);
     }
 }

@@ -42,7 +42,7 @@ namespace API_Filmes_SENAI.Controllers
         /// <param name="id">Id do GêneroBuscado</param>
         /// <returns>Gênero Buscado</returns>
 
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public IActionResult Post(Genero novoGenero)
         {

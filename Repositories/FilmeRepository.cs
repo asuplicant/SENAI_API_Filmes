@@ -15,7 +15,10 @@ namespace API_Filmes_SENAI.Repositories
         }
 
 
-        public void Atualizar(Guid id, Filme filme)
+
+        //----------------------------------------------------------------------------
+        // Atualizar.
+        void IFilmeRepository.Atualizar(Guid id, Filme filme)
         {
             try
             {
@@ -36,7 +39,9 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
-        public Filme BuscarPorID(Guid id)
+        //----------------------------------------------------------------------------
+        // Buscar Por ID
+        Filme IFilmeRepository.BuscarPorID(Guid id)
         {
             try
             {
@@ -51,17 +56,10 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
-        public Filme BuscarPorId(Guid id)
-        {
-            throw new NotImplementedException();
-        }
 
-        public List<Filme> BuscarPorTitulo(string titulo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Cadastrar(Filme novoFilme)
+        //----------------------------------------------------------------------------
+        // Cadastrar
+        void IFilmeRepository.Cadastrar(Filme novoFilme)
         {
             try
             {
@@ -77,7 +75,9 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
-        public void Deletar(Guid id)
+        //----------------------------------------------------------------------------
+        // Deletar.
+        void IFilmeRepository.Deletar(Guid id)
         {
             try
             {
@@ -98,7 +98,9 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
-        public List<Filme> Listar()
+        //----------------------------------------------------------------------------
+        // Listar.
+        List<Filme> IFilmeRepository.Listar()
         {
             try
             {
@@ -128,7 +130,9 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
-        public List<Filme> ListarPorGenero(Guid idGenero)
+        //----------------------------------------------------------------------------
+        // Listar Por Genero.
+        List<Filme> IFilmeRepository.ListarPorGenero(Guid idGenero)
         {
             try
             {
@@ -138,6 +142,22 @@ namespace API_Filmes_SENAI.Repositories
                     .ToList();
 
                 return filmesPorGenero;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        //----------------------------------------------------------------------------
+        // Buscar Por ID.
+        Filme IFilmeRepository.BuscarPorId(Guid id)
+        {
+            try
+            {
+                Filme filmeBuscado = _context.Filme.Find(id)!;
+
+                return filmeBuscado;
             }
             catch (Exception)
             {

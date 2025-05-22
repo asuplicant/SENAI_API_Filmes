@@ -20,7 +20,7 @@ namespace API_Filmes_SENAI.Controllers
         /// <summary>
         /// Endpoint para LISTAR um FILME pelo seu ID!
         /// </summary>
-        /// <param name="id">Id do GêneroBuscado</param>
+        /// <param name = "id" > Id do GêneroBuscado</param>
         /// <returns>Gênero Buscado</returns>
 
         [HttpGet]

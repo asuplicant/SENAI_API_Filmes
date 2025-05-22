@@ -11,11 +11,11 @@ namespace API_Filmes_SENAI.Repositories
     public class GeneroRepository : IGeneroRepository
     {
 
-        // variavel privada somente a leitura que "guarda" os dados do contexto
+        // Váriavel privada somente a leitura que "guarda" os dados do contexto
         private readonly Filmes_Context _context;
 
 
-        // construtor do repositorio
+        // Construtor do repositório.
 
         public GeneroRepository(Filmes_Context contexto)
         {
@@ -24,6 +24,9 @@ namespace API_Filmes_SENAI.Repositories
 
         }
 
+
+        //----------------------------------------------------------------------------
+        // Atualizar.
         public void Atualizar(Guid id, Genero genero)
         {
             try
@@ -43,6 +46,8 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
+        //----------------------------------------------------------------------------
+        // Buscar Por ID.
         public Genero BuscarPorID(Guid id)
         {
             try
@@ -58,9 +63,8 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
-  
-
-        // metodo para cadastrar um novo genero
+        //----------------------------------------------------------------------------
+        // Cadastrar.
         public void Cadastrar(Genero novoGenero)
         {
             try
@@ -78,6 +82,8 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
+        //----------------------------------------------------------------------------
+        // Deletar.
         public void Delete(Guid id)
         {
             try
@@ -99,6 +105,8 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
+        //----------------------------------------------------------------------------
+        // Listar.
         public List<Genero> Listar()
         {
             try

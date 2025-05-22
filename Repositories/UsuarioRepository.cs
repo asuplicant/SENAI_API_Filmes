@@ -16,6 +16,9 @@ namespace API_Filmes_SENAI.Repositories
             _context = Context;
         }
 
+
+        //----------------------------------------------------------------------------
+        // Buscar Por Email E Senha.
         public Usuario BuscarPorEmailESenha(string email, string senha)
         {
 
@@ -34,6 +37,8 @@ namespace API_Filmes_SENAI.Repositories
            
         }
 
+        //----------------------------------------------------------------------------
+        // Buscar Por ID.
         public Usuario BuscarPorId(Guid id)
         {
             try
@@ -54,6 +59,8 @@ namespace API_Filmes_SENAI.Repositories
             }
         }
 
+        //----------------------------------------------------------------------------
+        // Cadastrar.
         public void Cadastrar(Usuario novoUsuario)
         {
             try
